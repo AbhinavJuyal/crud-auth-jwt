@@ -1,0 +1,345 @@
+{
+  "users": [
+    {
+      "firstName": "Abhi",
+      "lastName": "Juyal",
+      "email": "abhinavj@gmail.com",
+      "phone": "3213213123",
+      "address": "asdsadsa",
+      "state": "Delhi",
+      "pin": 3123213,
+      "password": "MTIzNDU2Nzg=",
+      "id": 14
+    },
+    {
+      "firstName": "Tanya",
+      "lastName": "Joshi",
+      "email": "tj@gmail.com",
+      "phone": "1234567890",
+      "address": "Noida, Sector-24",
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "pin": 201301,
+      "password": "MTIzNDU2Nzg=",
+      "id": 16
+    },
+    {
+      "firstName": "Ayush",
+      "lastName": "Paharia",
+      "email": "ayush@gmail.com",
+      "password": "=",
+      "phone": "1234567890",
+      "address": "1234 Main St",
+      "city": "ifjslfjlsf",
+      "state": "Delhi",
+      "pin": 21211,
+      "id": 17
+    },
+    {
+      "firstName": "Vignesh",
+      "lastName": "Vishwanathan",
+      "email": "v@gmail.com",
+      "phone": "1234567800",
+      "address": "dsadsa",
+      "city": "asdsadsa",
+      "state": "Harayana",
+      "pin": 123213,
+      "password": "ZFc1a1pXWnBibVZr",
+      "id": 18
+    },
+    {
+      "firstName": "Mridula",
+      "lastName": "Bhat",
+      "email": "m@gmail.com",
+      "password": "MTIzNDU2Nzg=",
+      "phone": "",
+      "address": "asdasd",
+      "city": "sadasdas",
+      "state": "Uttar Pradesh",
+      "pin": 123213,
+      "id": 19
+    },
+    {
+      "firstName": "Apporva",
+      "lastName": "Seth",
+      "email": "dj@gmail.com",
+      "phone": "1236547890",
+      "address": "hkdsfhkfhdsk",
+      "city": "hkhdkfhkdshfk",
+      "state": "Delhi",
+      "pin": 12321,
+      "password": "dW5kZWZpbmVk",
+      "id": 20
+    },
+    {
+      "firstName": "Aparna",
+      "lastName": "Kumar",
+      "email": "ak@gmail.com",
+      "password": "MTIzNDU2Nzg=",
+      "phone": "0981236547",
+      "address": "hfksahfk",
+      "city": "kehsfkhdkjf",
+      "state": "Delhi",
+      "pin": 2131,
+      "id": 21
+    },
+    {
+      "firstName": "Nandita",
+      "lastName": "Pokhriyal",
+      "email": "n@gmail.com",
+      "password": "MTIzNDU2Nzg=",
+      "phone": "0987654321",
+      "address": "fhkuashfkh",
+      "city": "hdkaskfhksh",
+      "state": "Delhi",
+      "pin": 312321,
+      "id": 22
+    },
+    {
+      "firstName": "Adarsh",
+      "lastName": "Goswami",
+      "email": "ag@gmail.com",
+      "password": "MTIzNDU2Nzg=",
+      "phone": "1234567890",
+      "address": "kshafdksah",
+      "city": "hfkahskfh",
+      "state": "Delhi",
+      "pin": 213213,
+      "id": 23
+    },
+    {
+      "firstName": "V",
+      "lastName": "Singh",
+      "email": "vs@gmail.com",
+      "phone": "1368097524",
+      "address": "sfdsf",
+      "city": "dsfdsf",
+      "state": "Harayana",
+      "pin": 21321,
+      "password": "VmpKMFlXRnJNVmhTV0docVVtMW9XVmx0ZEV0alJteHpWMjFHYWxwNk1Eaz0=",
+      "id": 24
+    },
+    {
+      "firstName": "Soumya",
+      "lastName": "Singh",
+      "email": "ss@gmail.com",
+      "password": "MTIzNDU2Nzg=",
+      "phone": "0987612345",
+      "address": "dasdsada",
+      "city": "sadsad",
+      "state": "Harayana",
+      "pin": 213213,
+      "id": 25
+    },
+    {
+      "id": 26,
+      "firstName": "Ngaio",
+      "lastName": "Arocho",
+      "email": "nga.arocho@arvinmeritor.info",
+      "password": "MTIzNDU2Nzg=",
+      "address": "Home9",
+      "city": "",
+      "state": "",
+      "pin": "",
+      "phone": "8374892374"
+    },
+    {
+      "id": 27,
+      "firstName": "Ranjit ",
+      "lastName": "Bustos",
+      "email": "ranj.bust@progressenergyinc.info",
+      "password": "MTIzNDU2Nzg=",
+      "address": "",
+      "city": "",
+      "state": "",
+      "pin": "",
+      "phone": "9876543210"
+    },
+    {
+      "id": 28,
+      "firstName": "Quinn",
+      "lastName": "Bedell",
+      "email": "qube@arvinmeritor.info",
+      "password": "MTIzNDU2Nzg=",
+      "address": "C-48 Sky high tower",
+      "city": "Noida",
+      "state": "Uttarakhand",
+      "pin": "562312",
+      "phone": "8374892374"
+    },
+    {
+      "firstName": "Abhinav",
+      "lastName": "Juyal",
+      "email": "sei.juyal@gmail.com",
+      "phone": "1234567890",
+      "address": "",
+      "city": "",
+      "state": "",
+      "pin": "",
+      "password": "ODc2NTQzMjE=",
+      "id": 31
+    },
+    {
+      "firstName": "Peeyush",
+      "lastName": "Paul",
+      "email": "pe@gmail.com",
+      "password": "MTIzNDU2Nzg=",
+      "phone": "1234567890",
+      "address": "UP",
+      "city": "Noida",
+      "state": "Delhi",
+      "pin": 12321321,
+      "id": 32
+    }
+  ],
+  "states": [
+    {
+      "id": "1",
+      "name": "Andaman and Nicobar Islands"
+    },
+    {
+      "id": "2",
+      "name": "Andhra Pradesh"
+    },
+    {
+      "id": "3",
+      "name": "Arunachal Pradesh"
+    },
+    {
+      "id": "4",
+      "name": "Assam"
+    },
+    {
+      "id": "5",
+      "name": "Bihar"
+    },
+    {
+      "id": "6",
+      "name": "Chandigarh"
+    },
+    {
+      "id": "7",
+      "name": "Chhattisgarh"
+    },
+    {
+      "id": "8",
+      "name": "Dadra and Nagar Haveli"
+    },
+    {
+      "id": "9",
+      "name": "Daman and Diu"
+    },
+    {
+      "id": "10",
+      "name": "Delhi"
+    },
+    {
+      "id": "11",
+      "name": "Goa"
+    },
+    {
+      "id": "12",
+      "name": "Gujarat"
+    },
+    {
+      "id": "13",
+      "name": "Haryana"
+    },
+    {
+      "id": "14",
+      "name": "Himachal Pradesh"
+    },
+    {
+      "id": "15",
+      "name": "Jammu and Kashmir"
+    },
+    {
+      "id": "16",
+      "name": "Jharkhand"
+    },
+    {
+      "id": "17",
+      "name": "Karnataka"
+    },
+    {
+      "id": "18",
+      "name": "Kerala"
+    },
+    {
+      "id": "19",
+      "name": "Ladakh"
+    },
+    {
+      "id": "20",
+      "name": "Lakshadweep"
+    },
+    {
+      "id": "21",
+      "name": "Madhya Pradesh"
+    },
+    {
+      "id": "22",
+      "name": "Maharashtra"
+    },
+    {
+      "id": "23",
+      "name": "Manipur"
+    },
+    {
+      "id": "24",
+      "name": "Meghalaya"
+    },
+    {
+      "id": "25",
+      "name": "Mizoram"
+    },
+    {
+      "id": "26",
+      "name": "Nagaland"
+    },
+    {
+      "id": "27",
+      "name": "Odisha"
+    },
+    {
+      "id": "28",
+      "name": "Puducherry"
+    },
+    {
+      "id": "29",
+      "name": "Punjab"
+    },
+    {
+      "id": "30",
+      "name": "Rajasthan"
+    },
+    {
+      "id": "31",
+      "name": "Sikkim"
+    },
+    {
+      "id": "32",
+      "name": "Tamil Nadu"
+    },
+    {
+      "id": "33",
+      "name": "Telangana"
+    },
+    {
+      "id": "34",
+      "name": "Tripura"
+    },
+    {
+      "id": "35",
+      "name": "Uttar Pradesh"
+    },
+    {
+      "id": "36",
+      "name": "Uttarakhand"
+    },
+    {
+      "id": "37",
+      "name": "West Bengal"
+    }
+  ]
+}
