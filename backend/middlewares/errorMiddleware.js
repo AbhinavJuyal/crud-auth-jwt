@@ -1,7 +1,11 @@
 const errorMiddleware = (err, req, res, next) => {
   const statusCode = res.statusCode ? res.statusCode : 500;
-  console.log(statusCode);
-  res.status(statusCode).json({ message: "Improper structure"})
+  res.json({
+    message: err.message.startsWith("User validation failed:")
+      ? err
+      : err.message,
+    stack: process.env.NODE_ENV === "development" ? err.stack : "",
+  });
   next();
 };
 

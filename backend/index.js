@@ -1,7 +1,13 @@
 const express = require("express");
-const { errorMiddleware } = require("./middlewares/errorMiddleware.js");
 const app = express();
+const colors = require("colors");
+const dotenv = require("dotenv").config();
+const { connectDB } = require("./config/db");
+// middlewares
 const logger = require("./middlewares/logger.js");
+const { errorMiddleware } = require("./middlewares/errorMiddleware.js");
+
+connectDB();
 
 // middlewarse
 app.use(express.json());
@@ -16,5 +22,4 @@ app.get("/", function (req, res) {
 app.use(errorMiddleware);
 
 const PORT = 3000 || process.env.PORT;
-
-app.listen(3000, () => console.log("Server is running on port 3000!"));
+app.listen(PORT, () => console.log("Server is running on port 3000!"));
