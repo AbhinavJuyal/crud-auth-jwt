@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const User = require("../models/userModel");
+
 // @access private
 // @route GET /api/users
 // @returns [Array : { _id, name, email, password, createdAt, role }]
@@ -7,6 +8,7 @@ const getUsersList = asyncHandler(async (req, res) => {
   const users = await User.find().select("-updatedAt -createdAt -__v");
   res.status(200).json(users);
 });
+
 // @access private
 // @route GET /api/users/:id
 // @returns { _id, name, email, password, createdAt, role }
@@ -15,14 +17,15 @@ const getUserById = asyncHandler(async (req, res) => {
   const user = await User.findById(requestId).select("-updatedAt -createdAt -__v");
   res.status(200).json(user);
 });
+
 // @access private
-// @route POST /api/users/:id
+// @route POST /api/users/
 // @returns { _id, name, email, password, createdAt, role }
 const addUser = asyncHandler(async (req, res) => {
   const requestBody = req.body;
   console.log(req.body);
   const newUser = await User.create(requestBody);
-  res.status(200).json({
+  res.status(201).json({
     message: "New user added",
     request: {
       type: "GET",
@@ -30,6 +33,7 @@ const addUser = asyncHandler(async (req, res) => {
     },
   });
 });
+
 // @access private
 // @route PUT /api/users/:id
 // @returns { _id, name, email, password, createdAt, role }
@@ -47,6 +51,7 @@ const updateUser = asyncHandler(async (req, res) => {
     },
   });
 });
+
 // @access private
 // @route DELETE /api/users/:id
 // @returns { _id, name, email, password, createdAt, role }
