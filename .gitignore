@@ -4,3 +4,5 @@ build
 .env
 .env.local
 .env.development.local
+token.json
+db.json
