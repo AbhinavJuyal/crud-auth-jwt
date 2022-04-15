@@ -1,10 +1,8 @@
-const express = require("express");
-const router = express.Router();
-const User = require("../../models/userModel");
-const { verifyEmail } = require("../../controllers/verifyEmail");
-const { authRole } = require("../../middlewares/authRole");
-const { auth } = require("../../middlewares/auth");
+const express = require("express")
+const router = express.Router()
 
-router.route("/:id").get(verifyEmail);
+const { verifyEmail } = require("../../controllers/verifyEmail")
 
-module.exports = router;
+router.get("/:id", verifyEmail)
+
+module.exports = router

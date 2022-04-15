@@ -1,21 +1,22 @@
-const express = require("express");
-const router = express.Router();
+const express = require("express")
+const userRoutes = express.Router()
+
 const {
   getUsersList,
   getUserById,
   addUser,
   updateUser,
   deleteUser,
-} = require("../../controllers/users");
-const { auth } = require("../../middlewares/auth");
-const { authRole } = require("../../middlewares/authRole");
+} = require("../../controllers/users")
+const { auth } = require("../../middlewares/auth")
+const { authRole } = require("../../middlewares/authRole")
 
-router.use(auth);
-router.route("/").get(authRole, getUsersList).post(authRole, addUser);
-router
-  .route("/:id")
-  .get(authRole, getUserById)
-  .put(authRole, updateUser)
-  .delete(authRole, deleteUser);
+userRoutes.get("/", [auth, authRole], getUsersList)
 
-module.exports = router;
+userRoutes.post("/", [auth, authRole], addUser)
+
+userRoutes.get("/:id", [auth, authRole], getUserById)
+userRoutes.put("/:id", [auth, authRole], updateUser)
+userRoutes.delete("/:id", [auth, authRole], deleteUser)
+
+module.exports = userRoutes

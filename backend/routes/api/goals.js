@@ -1,16 +1,21 @@
-const express = require("express");
-const router = express.Router();
+const express = require("express")
+const goalRoutes = express.Router()
 const {
   setGoal,
   getGoals,
   updateGoal,
   deleteGoal,
-} = require("../../controllers/goals");
-const { auth } = require("../../middlewares/auth");
-const { authRole } = require("../../middlewares/authRole");
+} = require("../../controllers/goals")
 
-router.use(auth);
-router.route("/").get(authRole, getGoals).post(authRole, setGoal);
-router.route("/:id").put(authRole, updateGoal).delete(authRole, deleteGoal);
+const { auth } = require("../../middlewares/auth")
+const { authRole } = require("../../middlewares/authRole")
 
-module.exports = router;
+goalRoutes.get("/", [auth, authRole], getGoals)
+
+goalRoutes.post("/", [auth, authRole], setGoal)
+
+goalRoutes.delete("/:id", [auth, authRole], deleteGoal)
+
+goalRoutes.put("/:id", [auth, authRole], updateGoal)
+
+module.exports = goalRoutes
