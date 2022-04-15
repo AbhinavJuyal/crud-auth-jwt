@@ -4,18 +4,18 @@
 // }
 
 const permissions = {
-    admin: {
-        GET: ["/api/users", "/api/users/:id",],
-        POST: ["/api/users"],
-        PUT: ["/api/users/:id"],
-        DELETE: ["/api/users/:id"]
-    },
-    user: {
-        GET: ["/api/goals", "/api/users/:id"],
-        POST: ["/api/goals", "/api/user/login", "/api/user/register"],
-        PUT: ["/api/goals/:id",],
-        DELETE: ["/api/goals/:id",],
-    },
-}
+  admin: {
+    GET: ["/api/users", "/api/users/:id", "/api/verify/email/:id"],
+    POST: ["/api/users"],
+    PUT: ["/api/users/:id"],
+    DELETE: ["/api/users/:id"],
+  },
+  user: {
+    GET: ["/api/goals", "/api/users/:id", "/api/verify/email/:id, "],
+    POST: ["/api/goals", "/api/user/login", "/api/user/register"],
+    PUT: ["/api/goals/:id", "/api/users/:id"],
+    DELETE: ["/api/goals/:id"],
+  },
+};
 
 module.exports = permissions; // export the roles object

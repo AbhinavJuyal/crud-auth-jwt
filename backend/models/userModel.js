@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema(
     email: {
       type: String,
       required: [true, "Please add an email"],
-      unique: true
+      unique: true,
     },
     password: {
       type: String,
@@ -21,6 +21,14 @@ const userSchema = new mongoose.Schema(
     role: {
       type: String,
       required: [true, "Please add a role"],
+    },
+    active: {
+      type: Boolean,
+      required: [true, "Please add a status"],
+    },
+    hash: {
+      type: String,
+      unique: true,
     },
   },
   {
@@ -43,12 +51,16 @@ userSchema.pre("save", function (next) {
       // saving hash as the password
       user.password = hash;
       next();
-    })
-  })
-})
+    });
+  });
+});
 
 //compare password
-userSchema.statics.comparePassword = function (candidatePassword, dbPassword, cb) {
+userSchema.statics.comparePassword = function (
+  candidatePassword,
+  dbPassword,
+  cb
+) {
   // console.log(this);
   console.log("checking password...");
   bcrypt.compare(candidatePassword, dbPassword, function (err, isMatch) {
@@ -57,4 +69,4 @@ userSchema.statics.comparePassword = function (candidatePassword, dbPassword, cb
   });
 };
 
-module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model("User", userSchema);

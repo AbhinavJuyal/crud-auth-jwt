@@ -6,6 +6,7 @@ const User = require("../models/userModel");
 // @returns [Array : { _id, name, email, password, createdAt, role }]
 const getUsersList = asyncHandler(async (req, res) => {
   const users = await User.find().select("-updatedAt -createdAt -__v");
+  if (!users) throw new Error("No users found");
   res.status(200).json(users);
 });
 
@@ -14,7 +15,10 @@ const getUsersList = asyncHandler(async (req, res) => {
 // @returns { _id, name, email, password, createdAt, role }
 const getUserById = asyncHandler(async (req, res) => {
   const requestId = req.params.id;
-  const user = await User.findById(requestId).select("-updatedAt -createdAt -__v");
+  const user = await User.findById(requestId).select(
+    "-updatedAt -createdAt -__v"
+  );
+  if (!user) throw new Error("User not found");
   res.status(200).json(user);
 });
 
@@ -43,11 +47,14 @@ const updateUser = asyncHandler(async (req, res) => {
   const updUser = await User.findByIdAndUpdate(requestId, requestBody, {
     new: true,
   });
+  if (res.locals.user.id === req.params.id || res.locals.user.role !== "admin")
+    throw new Error("You are not authorized to update this user");
+  if (!updUser) throw new Error("User not found");
   res.status(200).json({
     message: "User updated successfully",
     request: {
       type: "GET",
-      url: `${process.env.BASE_URL}/api/users/${updUser._id}`,
+      url: `${process.env.BASE_URL}/api/users/${updUser.id}`,
     },
   });
 });
@@ -58,6 +65,7 @@ const updateUser = asyncHandler(async (req, res) => {
 const deleteUser = asyncHandler(async (req, res) => {
   const requestId = req.params.id;
   const delUser = await User.findByIdAndDelete(requestId);
+  if (!delUser) throw new Error("User not found");
   res.status(200).json({
     deleteCount: delUser,
     message: "User deleted successfully",
